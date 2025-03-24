@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Lookup</title>
+    
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #d4fcf7, #dbeeff);
+        }
+
+        .card-container {
+            display: flex;
+            width: 600px;
+            height: 350px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .left-section {
+            width: 40%;
+            background: #206b5d;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+            
+        }
+
+        .right-section {
+            width: 60%;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .btn-custom {
+            background: #206b5d;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .btn-custom:hover {
+            background: #174d42;
+        }
+
+        .input-field input {
+            border-bottom: 2px solid #206b5d !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <!-- Left Section -->
+        <div class="left-section">
+            <p>Welcome!</p>
+            <!-- <p>Enter Roll Number to Check Your Result</p> -->
+        </div>
+
+        <!-- Right Section -->
+        <div class="right-section">
+            <h5 class="center-align">Enter your rollNumber</h5>
+            
+            <form action="student.jsp" method="GET">
+                <div class="input-field">
+                    <input type="text" name="rollNumber" id="rollNumber" required>
+                    <label for="rollNumber">Enter Roll Number</label>
+                </div>
+                <button class="btn btn-custom waves-effect waves-light" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>
